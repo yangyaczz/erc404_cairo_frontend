@@ -32,16 +32,18 @@ body {
   font-size: 1em;
   font-weight: 600;
   font-family: inherit;
-  background-color: #ff727f;
+  background-color: #000000;
   cursor: pointer;
   transition: border-color 0.25s;
   text-transform: uppercase;
-  filter: drop-shadow(3px 4px 0 #0d0d2a);
-  color: rgba(255, 255, 255, 0.87);
+  /* filter: drop-shadow(3px 4px 0 #d8d8d8); */
+  color: rgba(158, 158, 158, 0.87);
+  border-color: rgb(226, 226, 226);
 }
 
 .btn:hover {
-  border-color: #6b099c;
+  border-color: #6d6d6d;
+  font-size: 1.05rem;
 }
 
 .btn:focus,

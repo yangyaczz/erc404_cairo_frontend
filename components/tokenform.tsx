@@ -7,11 +7,12 @@ import {
 import { FormEvent, useMemo, useState } from "react";
 import { cairo } from "starknet";
 import { truncate } from '@/lib/utils';
-import erc20 from '@/lib/erc20.json';
+import erc404 from '@/lib/erc404.json';
+
 
 // ERC20 token
 const CONTRACT_ADDRESS =
-  "0x00555927976905d77f9af1a88160b36246182291718a78dab477ea38b19c615d";
+  "0x0180624f9918dc685cdc3cc2b31bb21b268fd9abc878d40fa1b487bff0f4bbcd";
 
 export default function TokenForm() {
   const { address } = useAccount();
@@ -36,7 +37,7 @@ export default function TokenForm() {
   for a multicall
   */
   const { contract } = useContract({
-    abi: erc20,
+    abi: erc404,
     address: CONTRACT_ADDRESS,
   });
 
@@ -63,8 +64,8 @@ export default function TokenForm() {
   }
 
   return (
-    <div className=" my-8 px-8 py-6 bg-offblack border border-offwhite box-shadow text-center max-w-[600px] mx-auto">
-      <h3 className="text-md font-bold">
+    <div className=" my-8 px-8 py-6 bg-offblack border border-offwhite text-center max-w-[600px] mx-auto">
+      {/* <h3 className="text-md font-bold">
         ERC20 token{" "}
         <a
           href={`https://testnet.starkscan.co/contract/${CONTRACT_ADDRESS}`}
@@ -74,9 +75,9 @@ export default function TokenForm() {
         >
           {truncate(CONTRACT_ADDRESS)} ↗
         </a>
-      </h3>
+      </h3> */}
       <strong>
-        Balance: {balance?.formatted} {balance?.symbol}
+        Your  {balance?.symbol} Token Balance: {balance?.formatted}
       </strong>
       <form onSubmit={send} className="flex flex-col gap-4 my-4">
         <input

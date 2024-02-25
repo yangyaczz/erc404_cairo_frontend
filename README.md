@@ -2,7 +2,9 @@
 
 This is a [Starknet token app](https://starknet-token-bootstrap.vercel.app/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and [starknet-react](https://github.com/apibara/starknet-react).
 
-![Starknet token bootstrap](public/screenshot.png)
+![claim](public/claim.jpg)
+![mynft](public/mynft.jpg)
+![token](public/token.jpg)
 
 ## Getting Started
 
