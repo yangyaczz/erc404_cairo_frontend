@@ -15,7 +15,7 @@ const CONTRACT_ADDRESS =
     "0x0180624f9918dc685cdc3cc2b31bb21b268fd9abc878d40fa1b487bff0f4bbcd";
 
 interface CardProps {
-    id: stri
+    id: string;
     imagePath: string; 
     address: string;
 }

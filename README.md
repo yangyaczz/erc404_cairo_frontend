@@ -1,6 +1,6 @@
-# Token app bootstrap on Starknet
+# ERC404 on Starknet
 
-This is a [Starknet token app](https://starknet-token-bootstrap.vercel.app/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and [starknet-react](https://github.com/apibara/starknet-react).
+This is a [Starknet erc404 app](https://starknet-token-bootstrap.vercel.app/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and [starknet-react](https://github.com/apibara/starknet-react).
 
 ![claim](public/claim.jpg)
 ![mynft](public/mynft.jpg)
@@ -11,14 +11,12 @@ This is a [Starknet token app](https://starknet-token-bootstrap.vercel.app/) pro
 First, clone the repo and install the dependencies:
 
 ```sh
-git clone git@github.com:reddio-com/starknet-token-bootstrap.git
+git clone git@github.com:yangyaczz/erc404_cairo_frontend.git
 ```
 
 ```sh
-cd starknet-token-bootstrap
+cd erc404_cairo_frontend
 ```
-
-Next, go to /deploy folder, compile and deploy the ERC20 smart contract by following this [guide](https://github.com/reddio-com/cairo).
 
 Then, register your Reddio account to get API Key from [Dashboard](https://dashboard.reddio.com/), fill your API Key at .env file,
 
