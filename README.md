@@ -1,6 +1,13 @@
 # ERC404 on Starknet
 
-This is a [Starknet erc404 app](https://starknet-token-bootstrap.vercel.app/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and [starknet-react](https://github.com/apibara/starknet-react).
+This is a [Starknet erc404 app](https://erc404-cairo-frontend.vercel.app/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and [starknet-react](https://github.com/apibara/starknet-react).
+
+Frontend fork of [reddio starknet-token-bootstrap](https://github.com/reddio-com/starknet-token-bootstrap)
+
+This is the cairo implementation version of ERC404. And this is a combination of ERC20 and ERC721.
+Every time a user reaches 1 unit(1 * 10 ** 18), he owns 1 nft. He can also transfer it like ERC20.
+As conclusion, user can swap it in amm dex like ERC20, also user can list or offer it in marketplace like ERC721. 
+Enjoy it for free.
 
 ![claim](public/claim.jpg)
 ![mynft](public/mynft.jpg)
