@@ -49,7 +49,7 @@ export default function TokenForm() {
       BigInt(Number(amount) * 10 ** balance.decimals)
     );
 
-    return contract.populateTransaction["transfer"](to, amountAsUint256);
+    return [contract.populateTransaction["transfer"](to, amountAsUint256)];
   }, [to, amount, contract, balance]);
 
   // Hook returns function to trigger multicall transaction
@@ -81,6 +81,7 @@ export default function TokenForm() {
       </strong>
       <form onSubmit={send} className="flex flex-col gap-4 my-4">
         <input
+          className="text-white bg-transparent w-full focus:outline-none border border-gray-600 rounded"
           type="text"
           name="to"
           placeholder="Recipient"
@@ -88,6 +89,7 @@ export default function TokenForm() {
           onChange={(e) => setTo(e.target.value)}
         />
         <input
+          className="text-white bg-transparent w-full focus:outline-none border border-gray-600 rounded"
           type="number"
           name="amount"
           placeholder="Amount"

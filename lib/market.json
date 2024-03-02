@@ -1,0 +1,165 @@
+[
+    {
+        "type": "impl",
+        "name": "MarketImpl",
+        "interface_name": "erc404_cairo::Market::IMarket"
+    },
+    {
+        "type": "struct",
+        "name": "core::integer::u256",
+        "members": [
+            {
+                "name": "low",
+                "type": "core::integer::u128"
+            },
+            {
+                "name": "high",
+                "type": "core::integer::u128"
+            }
+        ]
+    },
+    {
+        "type": "interface",
+        "name": "erc404_cairo::Market::IMarket",
+        "items": [
+            {
+                "type": "function",
+                "name": "list",
+                "inputs": [
+                    {
+                        "name": "id",
+                        "type": "core::integer::u256"
+                    },
+                    {
+                        "name": "value",
+                        "type": "core::integer::u256"
+                    }
+                ],
+                "outputs": [],
+                "state_mutability": "external"
+            },
+            {
+                "type": "function",
+                "name": "buy",
+                "inputs": [
+                    {
+                        "name": "id",
+                        "type": "core::integer::u256"
+                    }
+                ],
+                "outputs": [],
+                "state_mutability": "external"
+            },
+            {
+                "type": "function",
+                "name": "cancel",
+                "inputs": [
+                    {
+                        "name": "id",
+                        "type": "core::integer::u256"
+                    }
+                ],
+                "outputs": [],
+                "state_mutability": "external"
+            },
+            {
+                "type": "function",
+                "name": "get_branch_price",
+                "inputs": [],
+                "outputs": [
+                    {
+                        "type": "core::array::Array::<core::integer::u256>"
+                    }
+                ],
+                "state_mutability": "view"
+            }
+        ]
+    },
+    {
+        "type": "constructor",
+        "name": "constructor",
+        "inputs": [
+            {
+                "name": "collection",
+                "type": "core::starknet::contract_address::ContractAddress"
+            },
+            {
+                "name": "eth",
+                "type": "core::starknet::contract_address::ContractAddress"
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "name": "erc404_cairo::Market::Market::List",
+        "kind": "struct",
+        "members": [
+            {
+                "name": "owner",
+                "type": "core::starknet::contract_address::ContractAddress",
+                "kind": "key"
+            },
+            {
+                "name": "id",
+                "type": "core::integer::u256",
+                "kind": "key"
+            },
+            {
+                "name": "value",
+                "type": "core::integer::u256",
+                "kind": "key"
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "name": "erc404_cairo::Market::Market::Buy",
+        "kind": "struct",
+        "members": [
+            {
+                "name": "buyer",
+                "type": "core::starknet::contract_address::ContractAddress",
+                "kind": "key"
+            },
+            {
+                "name": "id",
+                "type": "core::integer::u256",
+                "kind": "key"
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "name": "erc404_cairo::Market::Market::Cancel",
+        "kind": "struct",
+        "members": [
+            {
+                "name": "id",
+                "type": "core::integer::u256",
+                "kind": "key"
+            }
+        ]
+    },
+    {
+        "type": "event",
+        "name": "erc404_cairo::Market::Market::Event",
+        "kind": "enum",
+        "variants": [
+            {
+                "name": "List",
+                "type": "erc404_cairo::Market::Market::List",
+                "kind": "nested"
+            },
+            {
+                "name": "Buy",
+                "type": "erc404_cairo::Market::Market::Buy",
+                "kind": "nested"
+            },
+            {
+                "name": "Cancel",
+                "type": "erc404_cairo::Market::Market::Cancel",
+                "kind": "nested"
+            }
+        ]
+    }
+]

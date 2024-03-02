@@ -8,6 +8,10 @@ import SignForm from "@/components/signform";
 import TokenForm from "@/components/tokenform";
 import ClaimForm from "@/components/claimform";
 import MyNFTForm from "@/components/mynftform";
+import AmmdexForm from "@/components/ammdexform";
+import MarketForm from "@/components/marketform";
+
+
 
 import NetworkInfo from "@/components/networkinfo";
 
@@ -26,7 +30,9 @@ export default function Home() {
   const renderView = () => {
     switch (currentView) {
       case 'ammdex':
-        return <div><strong>{'ETH<>TT404 AMM POOL'}</strong></div>;
+        return <div className='w-full'>
+        <AmmdexForm />
+      </div>;
       case 'token':
         return <div className='w-full'>
           <TokenForm />
@@ -40,7 +46,9 @@ export default function Home() {
         <MyNFTForm />
       </div>;
       case 'market':
-        return <div><strong>{'TT404 NFT MARKETPLACE'}</strong></div>;
+        return <div className='w-full'>
+        <MarketForm />
+      </div>;
       default:
         return <div>claim</div>;
     }
